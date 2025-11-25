@@ -1,6 +1,6 @@
 # Personal Website
 
-Arjun's personal website - a simple, clean HTML-based personal site.
+Arjun's personal website - a simple, clean HTML-based personal  site.
 
 ## Features
 
