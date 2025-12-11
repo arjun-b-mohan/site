@@ -1,4 +1,4 @@
-/* Two-column sidebar layout inspired by qy.co */
+/* Clean minimal design with horizontal navigation */
 
 * {
     margin: 0;
@@ -12,47 +12,41 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    padding: 60px 24px;
 }
 
 .container {
-    display: flex;
-    min-height: 100vh;
-    max-width: 1200px;
+    max-width: 650px;
     margin: 0 auto;
-    padding: 60px 40px;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 160px;
-    flex-shrink: 0;
-    padding-right: 40px;
-    border-right: 1px solid #ddd;
+/* Header */
+header {
+    margin-bottom: 48px;
 }
 
-.sidebar h1 {
-    font-size: 16px;
+header h1 {
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
-.sidebar h1 a {
+header h1 a {
     color: #333;
     text-decoration: none;
 }
 
-.sidebar h1 a:hover {
+header h1 a:hover {
     color: #888;
 }
 
 nav {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    gap: 20px;
 }
 
 nav a {
-    color: #999;
+    color: #888;
     text-decoration: none;
     font-size: 15px;
 }
@@ -66,18 +60,21 @@ nav a.active {
 }
 
 /* Main Content */
-.content {
-    flex: 1;
-    padding-left: 60px;
-    max-width: 650px;
+main {
+    min-height: 50vh;
 }
 
 section {
     margin-bottom: 32px;
 }
 
-section:first-child {
+.intro {
     margin-bottom: 40px;
+}
+
+.intro p {
+    font-size: 17px;
+    color: #333;
 }
 
 /* Page Title */
@@ -93,7 +90,6 @@ section:first-child {
 .page-intro {
     color: #555;
     margin-bottom: 40px;
-    line-height: 1.7;
 }
 
 h2 {
@@ -101,7 +97,7 @@ h2 {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: #999;
+    color: #888;
     margin-bottom: 12px;
 }
 
@@ -116,7 +112,7 @@ p:last-child {
 
 /* Muted text */
 .muted {
-    color: #999;
+    color: #888;
     font-size: 14px;
 }
 
@@ -134,7 +130,7 @@ a:hover {
 
 /* Books Page */
 .book-entry {
-    padding: 40px 0;
+    padding: 32px 0;
     border-bottom: 1px solid #ddd;
     overflow: hidden;
 }
@@ -149,9 +145,9 @@ a:hover {
 
 .book-cover {
     float: left;
-    width: 120px;
-    margin-right: 24px;
-    margin-bottom: 12px;
+    width: 100px;
+    margin-right: 20px;
+    margin-bottom: 8px;
 }
 
 .book-cover img {
@@ -165,7 +161,7 @@ a:hover {
 }
 
 .book-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: #3498db;
     margin-bottom: 4px;
@@ -183,8 +179,8 @@ a:hover {
 
 .book-author {
     color: #666;
-    font-size: 15px;
-    margin-bottom: 16px;
+    font-size: 14px;
+    margin-bottom: 12px;
 }
 
 .book-review {
@@ -210,45 +206,41 @@ a:hover {
 }
 
 .link-note {
-    color: #999;
+    color: #888;
     font-size: 14px;
     margin-bottom: 0 !important;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 40px 24px;
+@media (max-width: 600px) {
+    body {
+        padding: 40px 20px;
     }
 
-    .sidebar {
-        width: 100%;
-        padding-right: 0;
-        padding-bottom: 24px;
-        margin-bottom: 32px;
-        border-right: none;
-        border-bottom: 1px solid #ddd;
+    header {
+        margin-bottom: 36px;
     }
 
-    .sidebar h1 {
-        margin-bottom: 16px;
+    header h1 {
+        font-size: 17px;
     }
 
     nav {
-        flex-direction: row;
         gap: 16px;
     }
 
-    .content {
-        padding-left: 0;
-        max-width: 100%;
+    nav a {
+        font-size: 14px;
+    }
+
+    .page-title {
+        font-size: 20px;
     }
 
     .book-cover {
         float: none;
-        width: 100px;
-        margin-bottom: 16px;
+        width: 80px;
+        margin-bottom: 12px;
     }
 
     .book-title {
