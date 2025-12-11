@@ -1,4 +1,4 @@
-/* Minimal, clean single-page design */
+/* Minimal, clean multi-page design */
 
 * {
     margin: 0;
@@ -9,62 +9,202 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     line-height: 1.7;
-    color: #000;
+    color: #111;
     background-color: #fff;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .container {
-    max-width: 650px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
-h1 {
-    font-size: 2em;
-    font-weight: 600;
-    margin-bottom: 50px;
-    color: #000;
+/* Header and Navigation */
+header {
+    margin-bottom: 60px;
 }
 
-h2 {
-    font-size: 1.2em;
+header h1 {
+    font-size: 1.5em;
     font-weight: 600;
-    margin-bottom: 15px;
-    margin-top: 40px;
-    color: #000;
+    margin-bottom: 20px;
+}
+
+header h1 a {
+    color: #111;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    color: #666;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #111;
+}
+
+nav a.active {
+    color: #111;
+}
+
+/* Main Content */
+main {
+    min-height: 60vh;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.intro {
+    margin-bottom: 50px;
+}
+
+.intro p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+h2 {
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #999;
+    margin-bottom: 16px;
 }
 
 p {
     margin-bottom: 8px;
-    line-height: 1.7;
-    color: #000;
+    color: #333;
 }
 
 a {
-    color: #0066cc;
-    text-decoration: none;
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #666;
+}
+
+/* Simple List */
+.simple-list {
+    list-style: none;
+}
+
+.simple-list li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item .date {
+    display: block;
+    font-size: 0.85em;
+    color: #999;
+    margin-bottom: 4px;
+}
+
+.experience-item p {
+    margin: 0;
+}
+
+/* Books Section */
+.books-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.book-item:last-child {
+    border-bottom: none;
+}
+
+.book-title {
+    font-weight: 500;
+    color: #111;
+}
+
+.book-author {
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* Links Section */
+.link-item {
+    margin-bottom: 16px;
+}
+
+.link-item a {
+    font-weight: 500;
+}
+
+.link-description {
+    display: block;
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* Empty State */
+.empty-state {
+    color: #999;
+    font-style: italic;
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
     body {
-        padding: 30px 15px;
+        padding: 40px 20px;
     }
 
-    h1 {
-        font-size: 1.6em;
+    header {
         margin-bottom: 40px;
     }
 
+    header h1 {
+        font-size: 1.3em;
+        margin-bottom: 16px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 0.9em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
     h2 {
-        font-size: 1.1em;
+        font-size: 0.8em;
     }
 }
